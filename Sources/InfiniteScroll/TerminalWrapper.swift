@@ -69,12 +69,20 @@ struct TerminalWrapper: NSViewRepresentable {
             if !sessionExists {
                 args += ["-c", initialDirectory]
             }
+            context.coordinator.isTmux = true
             termView.startProcess(
                 executable: tmuxPath,
                 args: args,
                 environment: envPairs,
                 execName: "tmux"
             )
+            // Force tmux to redraw after reattach — fixes display corruption
+            if sessionExists {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    // Send Ctrl+L to clear/redraw, then clear the screen properly
+                    termView.send(data: ArraySlice<UInt8>([0x0c])) // Ctrl+L
+                }
+            }
         } else {
             // Fallback: plain zsh
             termView.startProcess(
@@ -120,6 +128,7 @@ struct TerminalWrapper: NSViewRepresentable {
         private var cwdTimer: Timer?
         private var lastKnownCwd: String?
         private var oscWorking = false
+        var isTmux = false
 
         init(terminalID: UUID, initialDirectory: String, onExit: @escaping (Int32) -> Void, onCwdChange: @escaping (String) -> Void) {
             self.terminalID = terminalID
